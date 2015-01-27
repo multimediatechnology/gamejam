@@ -116,9 +116,11 @@ h1, h2, h3, h4, h5, h6 {
 .headroom {
   transition: transform 200ms linear;
 }
+
 .headroom--pinned {
   transform: translateY(0%);
 }
+
 .headroom--unpinned {
   transform: translateY(-100%);
 }
@@ -215,15 +217,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-tito-button {
+.tito-button {
   button {
     &:extend(.btn);
     &:extend(.btn-xl);
     border: none;
   }
 }
-
-@import "speakers";
 
 @media (min-width: 768px) {
   .navbar-brand img {
