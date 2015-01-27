@@ -47,6 +47,17 @@ $( function() {
   $( '.navbar-collapse ul li a' ).click( function() {
     $( '.navbar-toggle:visible' ).click();
   } );
+
+  // Slider
+  $( '.slider' ).unslider( {
+    speed:    500,
+    delay:    3000,
+    complete: function() {
+    },
+    keys:     true,
+    dots:     true,
+    fluid:    false
+  } );
 } );
 
 window.addEventListener( 'updateready', window.location.reload );
