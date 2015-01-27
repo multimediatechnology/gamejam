@@ -1,4 +1,4 @@
-You may [contact us](mailto:contact@conc.at) anytime.
+You may [contact us](mailto:florian@game-jam.at) anytime.
 
 ### Offenlegungspflicht gemäß § 25 MedienG und Informationspflicht gemäß E-Commerce-Gesetz
 
@@ -23,20 +23,11 @@ You may [contact us](mailto:contact@conc.at) anytime.
 
 Für den Inhalt der Website verantwortlich:
 
-| Contact   | Stephan Bönnemann
+| Contact   | Florian Jindra
 | :-------- | :-
-| Twitter   | [@boennemann](https://twitter.com/boennemann)
-| Email     | [stephan@boennemann.me](mailto:stephan@boennemann.me)
-| Phone(AT) | [+4915142318681](tel:004915142318681)
-| Phone(DE) | [+436603936464](tel:00436603936464)
-
-<br>
-
-| Contact   | Hannes Moser
-| :-------- | :-
-| Twitter   | [@eliias](https://twitter.com/eliias)
-| Email     | [hannes.moser@fh-salzburg.ac.at](mailto:hannes.moser@fh-salzburg.ac.at)
-| Phone(AT) | [+436641563323](tel:00436641563323)
+| Twitter   | [@GamesWorkshopS](https://twitter.com/GamesWorkshopS)
+| Email     | [florian.jindra@fh-salzburg.ac.at](mailto:florian.jindra@fh-salzburg.ac.at)
+| Phone(AT) | [+436769032416](tel:00436769032416)
 
 <br>
 
