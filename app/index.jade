@@ -1,7 +1,6 @@
 extends ./jade/layout.jade
 
 include ./jade/mixins/abstract
-include ./jade/mixins/speaker
 include ./jade/mixins/social
 
 block content
@@ -9,11 +8,9 @@ block content
   include ./jade/header
   include ./jade/about
   include ./jade/map
-  include ./jade/speakers
-  include ./jade/tickets
+  include ./jade/register
   include ./jade/a11y
   include ./jade/coc
-  include ./jade/sponsors
   include ./jade/team
   
   block modals
