@@ -1,40 +1,40 @@
-module.exports = function (grunt) {
+module.exports = function( grunt ) {
   'use strict';
 
-  var fs = require('fs');
-  var marked = require('marked');
+  var fs = require( 'fs' );
+  var marked = require( 'marked' );
 
   // Load grunt tasks automatically
-  require('load-grunt-tasks')(grunt);
+  require( 'load-grunt-tasks' )( grunt );
 
   // Time how long tasks take. Can help when optimizing build times
-  require('time-grunt')(grunt);
+  require( 'time-grunt' )( grunt );
 
   var config = {
-    app: 'app',
+    app:  'app',
     dist: 'dist'
   };
 
-  grunt.initConfig({
+  grunt.initConfig( {
 
     config: config,
 
     watch: {
-      js: {
-        files: ['<%= config.app %>/scripts/**/*.js'],
-        tasks: ['jshint'],
+      js:         {
+        files:   ['<%= config.app %>/scripts/**/*.js'],
+        tasks:   ['jshint'],
         options: {
           livereload: true
         }
       },
-      gruntfile: {
+      gruntfile:  {
         files: ['Gruntfile.js']
       },
-      less: {
+      less:       {
         files: ['<%= config.app %>/styles/**/*.less'],
         tasks: ['less:styles', 'autoprefixer']
       },
-      jade: {
+      jade:       {
         files: ['<%= config.app %>/**/*.{jade,md}'],
         tasks: ['jade:build']
       },
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
         options: {
           livereload: '<%= connect.options.livereload %>'
         },
-        files: [
+        files:   [
           '.tmp/**/*.html',
           '.tmp/styles/**/*.css',
           '<%= config.app %>/images/**/*'
@@ -51,33 +51,33 @@ module.exports = function (grunt) {
     },
 
     connect: {
-      options: {
-        port: 9000,
-        open: true,
+      options:    {
+        port:       9000,
+        open:       true,
         livereload: 35729,
-        hostname: '0.0.0.0'
+        hostname:   '0.0.0.0'
       },
       livereload: {
         options: {
-          middleware: function(connect) {
+          middleware: function( connect ) {
             return [
-              connect.static('.tmp'),
-              connect().use('/node_modules', connect.static('./node_modules')),
-              connect.static(config.app)
+              connect.static( '.tmp' ),
+              connect().use( '/node_modules', connect.static( './node_modules' ) ),
+              connect.static( config.app )
             ];
           }
         }
       },
-      dist: {
+      dist:       {
         options: {
-          base: '<%= config.dist %>',
+          base:       '<%= config.dist %>',
           livereload: false
         }
       }
     },
 
     clean: {
-      dist: {
+      dist:   {
         files: [{
           dot: true,
           src: [
@@ -93,9 +93,9 @@ module.exports = function (grunt) {
     jshint: {
       options: {
         jshintrc: '.jshintrc',
-        reporter: require('jshint-stylish')
+        reporter: require( 'jshint-stylish' )
       },
-      all: [
+      all:     [
         'Gruntfile.js',
         '<%= config.app %>/scripts/**/*.js',
         '!<%= config.app %>/scripts/vendor/*',
@@ -106,12 +106,12 @@ module.exports = function (grunt) {
       options: {
         browsers: ['last 1 version']
       },
-      dist: {
+      dist:    {
         files: [{
           expand: true,
-          cwd: '.tmp/styles/',
-          src: '**/*.css',
-          dest: '<%= config.dist %>/styles/'
+          cwd:    '.tmp/styles/',
+          src:    '**/*.css',
+          dest:   '<%= config.dist %>/styles/'
         }]
       }
     },
@@ -135,14 +135,14 @@ module.exports = function (grunt) {
       options: {
         dest: '<%= config.dist %>'
       },
-      html: '<%= config.dist %>/index.html'
+      html:    '<%= config.dist %>/index.html'
     },
 
     usemin: {
       options: {
-        assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images'],
+        assetsDirs:        ['<%= config.dist %>', '<%= config.dist %>/images'],
         blockReplacements: {
-          js: function (block) {
+          js: function( block ) {
             if (block.dest === 'scripts/main.js') {
               return '<script async src="' + block.dest + '"><\/script>';
             }
@@ -150,17 +150,17 @@ module.exports = function (grunt) {
           }
         }
       },
-      html: ['<%= config.dist %>/**/*.html'],
-      css: ['<%= config.dist %>/styles/**/*.css']
+      html:    ['<%= config.dist %>/**/*.html'],
+      css:     ['<%= config.dist %>/styles/**/*.css']
     },
 
     imagemin: {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= config.app %>/images',
-          src: '**/*.{gif,jpeg,jpg,png}',
-          dest: '<%= config.dist %>/images'
+          cwd:    '<%= config.app %>/images',
+          src:    '**/*.{gif,jpeg,jpg,png}',
+          dest:   '<%= config.dist %>/images'
         }]
       }
     },
@@ -169,9 +169,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= config.app %>/images',
-          src: '**/*.svg',
-          dest: '<%= config.dist %>/images'
+          cwd:    '<%= config.app %>/images',
+          src:    '**/*.svg',
+          dest:   '<%= config.dist %>/images'
         }]
       }
     },
@@ -180,19 +180,19 @@ module.exports = function (grunt) {
       dist: {
         options: {
           collapseBooleanAttributes: true,
-          collapseWhitespace: true,
-          removeAttributeQuotes: true,
-          removeCommentsFromCDATA: true,
-          removeEmptyAttributes: true,
-          removeOptionalTags: true,
+          collapseWhitespace:        true,
+          removeAttributeQuotes:     true,
+          removeCommentsFromCDATA:   true,
+          removeEmptyAttributes:     true,
+          removeOptionalTags:        true,
           removeRedundantAttributes: true,
-          useShortDoctype: true
+          useShortDoctype:           true
         },
-        files: [{
+        files:   [{
           expand: true,
-          cwd: '<%= config.dist %>',
-          src: '**/*.html',
-          dest: '<%= config.dist %>'
+          cwd:    '<%= config.dist %>',
+          src:    '**/*.html',
+          dest:   '<%= config.dist %>'
         }]
       }
     },
@@ -201,10 +201,10 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          dot: true,
-          cwd: '<%= config.app %>',
-          dest: '<%= config.dist %>',
-          src: [
+          dot:    true,
+          cwd:    '<%= config.app %>',
+          dest:   '<%= config.dist %>',
+          src:    [
             'CNAME',
             '.htaccess',
             '.nojekyll',
@@ -216,23 +216,23 @@ module.exports = function (grunt) {
           ]
         }, {
           expand: true,
-          dot: true,
-          cwd: 'node_modules/bootstrap/dist',
-          src: ['fonts/*.*'],
-          dest: '<%= config.dist %>'
+          dot:    true,
+          cwd:    'node_modules/bootstrap/dist',
+          src:    ['fonts/*.*'],
+          dest:   '<%= config.dist %>'
         }, {
           expand: true,
-          dot: true,
-          cwd: 'node_modules/font-awesome/',
-          src: ['fonts/*.*'],
-          dest: '<%= config.dist %>'
+          dot:    true,
+          cwd:    'node_modules/font-awesome/',
+          src:    ['fonts/*.*'],
+          dest:   '<%= config.dist %>'
         }]
       }
     },
 
     less: {
       styles: {
-        src: '<%= config.app %>/styles/main.less',
+        src:  '<%= config.app %>/styles/main.less',
         dest: '.tmp/styles/main.css'
       }
     },
@@ -240,18 +240,18 @@ module.exports = function (grunt) {
     jade: {
       options: {
         pretty: true,
-        data: {
-          dynamicmd: function(path) {
-            return marked(fs.readFileSync(path.trim())+'');
+        data:   {
+          dynamicmd: function( path ) {
+            return marked( fs.readFileSync( path.trim() ) + '' );
           }
         }
       },
-      build: {
-        src: '<%= config.app %>/index.jade',
+      build:   {
+        src:  '<%= config.app %>/index.jade',
         dest: '.tmp/index.html'
       },
-      dist: {
-        src: '<%= config.app %>/index.jade',
+      dist:    {
+        src:  '<%= config.app %>/index.jade',
         dest: '<%= config.dist %>/index.html'
       }
     },
@@ -261,7 +261,7 @@ module.exports = function (grunt) {
         'less:styles',
         'jade:build'
       ],
-      dist: [
+      dist:   [
         'less:styles',
         'imagemin',
         'svgmin'
@@ -277,12 +277,12 @@ module.exports = function (grunt) {
 
     manifest: {
       options: {
-        basePath: '<%= config.dist %>',
+        basePath:     '<%= config.dist %>',
         preferOnline: true,
-        verbose: false,
+        verbose:      false,
       },
-      dist: {
-        src: [
+      dist:    {
+        src:  [
           'fonts/**/*.*',
           'images/**/*.*',
           'scripts/**/*.*',
@@ -313,9 +313,9 @@ module.exports = function (grunt) {
           /\.social\-buttons/
         ]
       },
-      dist: {
+      dist:    {
         files: [{
-          src: '<%= config.dist %>/index.html',
+          src:  '<%= config.dist %>/index.html',
           dest: '<%= config.dist %>/styles/main.css'
         }]
       }
@@ -324,7 +324,7 @@ module.exports = function (grunt) {
     cssmin: {
       dist: {
         files: [{
-          src: '<%= config.dist %>/styles/main.css',
+          src:  '<%= config.dist %>/styles/main.css',
           dest: '<%= config.dist %>/styles/main.css'
         }]
       }
@@ -334,30 +334,36 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= config.app %>',
-          src: ['schemas/*.jsonld'],
-          dest: '<%= config.dist %>'
+          cwd:    '<%= config.app %>',
+          src:    ['schemas/*.jsonld'],
+          dest:   '<%= config.dist %>'
         }]
       }
+    },
+
+    favicons: {
+      icons: {
+        src:  '<%= config.app %>/images/logo.png',
+        dest: '<%= config.app %>/favicons'
+      }
     }
-  });
+  } );
 
-
-  grunt.registerTask('serve', function (target) {
+  grunt.registerTask( 'serve', function( target ) {
     if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
+      return grunt.task.run( ['build', 'connect:dist:keepalive'] );
     }
 
-    grunt.task.run([
+    grunt.task.run( [
       'clean:server',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
       'watch'
-    ]);
-  });
+    ] );
+  } );
 
-  grunt.registerTask('build', [
+  grunt.registerTask( 'build', [
     'clean:dist',
     'jade:dist',
     'useminPrepare',
@@ -374,10 +380,10 @@ module.exports = function (grunt) {
     'jsonmin',
     'sitemap'
     // 'manifest'
-  ]);
+  ] );
 
-  grunt.registerTask('default', [
+  grunt.registerTask( 'default', [
     'newer:jshint',
     'build'
-  ]);
+  ] );
 };
