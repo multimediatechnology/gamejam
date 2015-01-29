@@ -48,11 +48,6 @@ $( function() {
     $( '.navbar-toggle:visible' ).click();
   } );
 
-  // Slider
-  $( '.slider' ).unslider( {
-    dots:     true,
-    fluid:    false
-  } );
 } );
 
 window.addEventListener( 'updateready', window.location.reload );
