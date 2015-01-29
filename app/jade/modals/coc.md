@@ -4,7 +4,7 @@ Need help? Contact us!
 
 ### The Quick Version
 
-Gamejam Salzburg is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organizers.
+Gamejam Salzburg is dedicated to providing a harassment-free event experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of event participants in any form. Sexual language and imagery is not appropriate for any event venue, including talks, workshops, parties, Twitter and other online media. Event participants violating these rules may be sanctioned or expelled from the event without a refund at the discretion of the event organizers.
 
 ### The Less Quick Version
 
@@ -14,9 +14,9 @@ Participants asked to stop any harassing behavior are expected to comply immedia
 
 Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualized images, activities, or other material. Booth staff (including volunteers) should not use sexualized clothing/uniforms/costumes, or otherwise create a sexualized environment.
 
-If a participant engages in harassing behavior, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund.
+If a participant engages in harassing behavior, the event organizers may take any action they deem appropriate, including warning the offender or expulsion from the event with no refund.
 
-If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff can be identified by a special conference shirt.
+If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of event staff immediately. Event staff can be identified by a special event shirt.
 
 In case you can’t find a staff member or want to contact us via email or phone directly, we are always there for you:
 
@@ -24,12 +24,12 @@ In case you can’t find a staff member or want to contact us via email or phone
 | :-------- | :-
 | Twitter   | [@eliias](https://twitter.com/eliias)
 | Email     | [hannes.moser@fh-salzburg.ac.at](mailto:hannes.moser@fh-salzburg.ac.at)
-| Phone(AT) | [+436769032416](tel:00436769032416)
+| Phone(AT) | [+436641563323](tel:00436641563323)
 
 <br>
 
-Conference staff will be happy to help participants contact hotel / venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
+Event staff will be happy to help participants contact hotel / venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the event. We value your attendance.
 
-We expect participants to follow these rules at conference and workshop venues and conference-related social events.
+We expect participants to follow these rules at event and workshop venues and event-related social events.
 
 We gladly adapted this document from [Reject.JS's code of conduct](http://rejectjs.org/code_of_conduct/). Thank you for reading it, we can't wait to welcome you in Salzburg!
