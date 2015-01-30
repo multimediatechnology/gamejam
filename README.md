@@ -1,7 +1,7 @@
 # [game-jam.at](https://game-jam.at/)
 [![Build Status](https://jenkins.dovigo.org/buildStatus/icon?job=gamejam)](https://jenkins.dovigo.org/job/gamejam/)
 
-> gamejam.at is a static single page website. It is generated with grunt, written in jade, less and js and uses jQuery and Bootstrap.
+> game-jam.at is a static single page website. It is generated with grunt, written in jade, less and js and uses jQuery and Bootstrap.
 
 ## Dependencies
 
