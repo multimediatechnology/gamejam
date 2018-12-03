@@ -295,7 +295,11 @@ module.exports = function( grunt ) {
     cssmin: {
       dist: {
         files: [{
-          src:  '.tmp/styles/main.css',
+          src:  [
+            './node_modules/bootstrap/dist/css/bootstrap.css',
+            './node_modules/font-awesome/css/font-awesome.css',
+            '.tmp/styles/main.css'
+          ],
           dest: '<%= config.dist %>/styles/main.css'
         }]
       }
