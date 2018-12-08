@@ -38,7 +38,6 @@
     "load-grunt-tasks": "^2.0.0",
     "marked": "^0.5.2",
     "picturefill": "^2.2.0",
-    "serve": "^10.1.1",
     "time-grunt": "^1.0.0"
   },
   "engines": {
